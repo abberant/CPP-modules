@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 20:28:43 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/13 00:20:18 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/17 19:20:43 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	Phonebook::addContact(void) {
 		_index++;
 	}
 	catch (std::runtime_error& e) {
-		std::cout << "Contact not added: " << e.what() << std::endl;
+		std::cerr << "Contact not added: " << e.what() << std::endl;
 	}
 	return ;
 }

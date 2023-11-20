@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 20:28:50 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/12 23:58:55 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/17 23:19:32 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,11 +101,11 @@ std::string	Contact::getDarkestSecret(void) {
 
 void	Contact::setContact(void) {
 	try {
-		setInput("\tEnter first name: ", "Invalid input: ", &Contact::setFirstName);
-		setInput("\tEnter last name: ", "Invalid input: ", &Contact::setLastName);
-		setInput("\tEnter nickname: ", "Invalid input: ", &Contact::setNickname);
-		setInput("\tEnter phone number: ", "Invalid input: ", &Contact::setPhoneNumber);
-		setInput("\tEnter darkest secret: ", "Invalid input: ", &Contact::setDarkestSecret);
+		setInput("\tEnter first name: ", &Contact::setFirstName);
+		setInput("\tEnter last name: ", &Contact::setLastName);
+		setInput("\tEnter nickname: ", &Contact::setNickname);
+		setInput("\tEnter phone number: ", &Contact::setPhoneNumber);
+		setInput("\tEnter darkest secret: ", &Contact::setDarkestSecret);
 		std::cout << "Contact added successfully!\n" << std::endl;
 	} 
 	catch (std::runtime_error& e) {
@@ -115,11 +115,11 @@ void	Contact::setContact(void) {
 		clearInput(_phoneNumber);
 		clearInput(_darkestSecret);
 		throw std::runtime_error(e.what());
-    }
+	}
 	return ;
 }
 
-void 	Contact::setInput(const std::string& prompt, const std::string& errorMessage, void (Contact::*setter)(const std::string))
+void 	Contact::setInput(const std::string& prompt, void (Contact::*setter)(const std::string))
 {
 	std::string value;
 	bool isValid;
@@ -129,19 +129,16 @@ void 	Contact::setInput(const std::string& prompt, const std::string& errorMessa
 	{
 		std::cout << prompt;
 		std::getline(std::cin, value);
-		if (std::cin.eof())
-		{
+		if (std::cin.eof()) {
 			std::cerr << "\ngetline() anomaly." << std::endl;
 			exit(1);
 		}
-		try
-		{
+		try {
 			(this->*setter)(value);
 			isValid = true;
 		}
-		catch (std::exception& e)
-		{
-			std::cout << errorMessage << e.what() << std::endl;
+		catch (std::exception& e) {
+			std::cerr << "Invalid input: " << e.what() << std::endl;
 		}
 	}
 	if (!isValid)
@@ -154,11 +151,11 @@ void	Contact::clearInput(std::string& input) {
 }
 
 void	Contact::printContact(void) {
-	std::cout <<std::endl;
+	std::cout << std::endl;
 	std::cout << "First name: " << this->getFirstName() << std::endl;
 	std::cout << "Last name: " << this->getLastName() << std::endl;
 	std::cout << "Nickname: " << this->getNickname() << std::endl;
 	std::cout << "Phone number: " << this->getPhoneNumber() << std::endl;
 	std::cout << "Darkest secret: " << this->getDarkestSecret() << std::endl;
-	std::cout <<std::endl;
+	std::cout << std::endl;
 }

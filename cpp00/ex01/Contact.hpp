@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 20:27:21 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/10 23:36:12 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/17 18:46:14 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class Contact {
 		std::string	getDarkestSecret();
 
 		void		setContact();
-		void		setInput(const std::string& prompt, const std::string& errorMessage, void (Contact::*setter)(const std::string));
+		void		setInput(const std::string& prompt, void (Contact::*setter)(const std::string));
 		void		clearInput(std::string& input);
 		void		printContact();
 };

@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 12:07:37 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/13 17:22:34 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/19 16:18:17 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,11 @@ void	Account::_displayTimestamp(void)
 	time_t		now = time(0);
 	std::tm		*ltm = localtime(&now);
 	std::cout << "[" << 1900 + ltm->tm_year;
-	std::cout << std::setw(2) << std::setfill('0') << 1 + ltm->tm_mon;
-	std::cout << std::setw(2) << std::setfill('0') << ltm->tm_mday << "_";
-	std::cout << std::setw(2) << std::setfill('0') << ltm->tm_hour;
-	std::cout << std::setw(2) << std::setfill('0') << ltm->tm_min;
-	std::cout << std::setw(2) << std::setfill('0') << ltm->tm_sec << "] ";
+	std::cout << 1 + ltm->tm_mon;
+	std::cout << ltm->tm_mday << "_";
+	std::cout << ltm->tm_hour;
+	std::cout << ltm->tm_min;
+	std::cout << ltm->tm_sec << "] ";
 }
 
 void	Account::displayAccountsInfos(void)
