@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:55:01 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/16 15:09:55 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/19 17:09:23 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	harl_dialogue(Harl &harl, std::string level)
 
 static void _dialogue(Harl &harl)
 {
-	std::string harl_levels[5] = {"DEBUG", "INFO", "WARNING", "ERROR", "INVALID"};
+	std::string harl_levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	std::string barrista_lines[5] = {
 		"Hello, sir. How can I help you?",
 		"Certainly, sir! We offer additional toppings for an extra charge. I'll make sure to add more bacon to your order.",

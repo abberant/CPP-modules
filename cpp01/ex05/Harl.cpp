@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:55:03 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/15 19:56:04 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/20 19:04:29 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	Harl::_complain(std::string level)
 		}
 		i++;
 	}
-	std::cout << "Bla bla bla bla... *in the distance*" << std::endl;
+	std::cout << "[Inaudible voices in the distance]" << std::endl;
 	return ;
 }
 

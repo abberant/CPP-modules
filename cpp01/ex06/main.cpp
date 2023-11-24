@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:58:18 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/16 16:08:42 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:21:04 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	_dialogue(Harl &harl, std::string level)
 		case WARNING :
 			barrista_lines[1] = "Sir, there is additional charge for extra bacon.";
 			barrista_lines[2] = "Is there anything else I can assist you with?";
-            barrista_lines[3] = "Sir, please, calm down!";
+			barrista_lines[3] = "Sir, please, calm down!";
 			break;
 		case ERROR :
 			barrista_lines[1] = "Do you hear me, sir?";

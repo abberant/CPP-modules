@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 20:47:17 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/13 21:30:01 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/19 16:29:44 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int main()
 
 	Zombie* z2 = newZombie("Zombie2");
 	z2->announce();
-
-	std::cout << std::endl;
 
 	delete z2;
 

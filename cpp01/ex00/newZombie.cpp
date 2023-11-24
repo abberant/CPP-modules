@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 20:55:52 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/13 20:56:29 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/19 16:28:18 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 Zombie	*newZombie(std::string name)
 {
-    Zombie	*z = new Zombie(name);
-    return (z);
+    return new Zombie(name);
 }

@@ -6,26 +6,24 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 16:10:27 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/15 16:50:26 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:11:55 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "NotSed.hpp"
 
 FileReplacer::FileReplacer(std::string filename, std::string searched, std::string replaced) :
-    _filename(filename), _searched(searched), _replaced(replaced)
+	_filename(filename), _searched(searched), _replaced(replaced)
 {
 	std::ifstream	ifile(filename);
 	std::string		line;
 
-	if (!ifile)
-	{
+	if (!ifile.) {
 		std::cout << "Error opening file: " << filename << "." << std::endl;
 		return ;
 	}
 	_ofile.open(filename + ".replace");
-	if (!_ofile)
-	{
+	if (!_ofile) {
 		std::cout << "Error creating output file " << filename << ".replace." << std::endl;
 		return ;
 	}
@@ -48,8 +46,7 @@ void	FileReplacer::replace(const std::string& line)
 	std::string::size_type	pos = 0;
 	std::string::size_type	prev = 0;
 
-	while ((pos = line.find(_searched, pos)) != std::string::npos)
-	{
+	while ((pos = line.find(_searched, pos)) != std::string::npos) {
 		_ofile << line.substr(prev, pos - prev) << _replaced;
 		pos += _searched.length();
 		prev = pos;

@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:24:50 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/14 15:32:55 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/22 18:16:02 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ int main()
 	std::cout << "Value of stringPTR: " << *stringPTR << std::endl;
 	std::cout << "Value of stringREF: " << stringREF << std::endl;
 	
+	return 0;
 }

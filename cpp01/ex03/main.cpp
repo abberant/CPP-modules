@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:58:31 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/14 16:01:09 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/22 15:42:36 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int main ()
 		club.setType("some other type of club");
 		jim.attack();
 	}
+
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 21:45:51 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/13 21:51:25 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/19 16:36:19 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 Zombie* zombieHorde(int N, std::string name)
 {
+	if (N <= 0) {
+		std::cout << "Invalid number of zombies." << std::endl;
+		return (NULL);
+	}
 	Zombie* horde = new Zombie[N];
 	for (int i = 0; i < N; i++)
 		horde[i].setName(name);
