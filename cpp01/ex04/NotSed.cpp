@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 16:10:27 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/24 16:11:55 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/28 20:48:54 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 FileReplacer::FileReplacer(std::string filename, std::string searched, std::string replaced) :
 	_filename(filename), _searched(searched), _replaced(replaced)
-{
+{	
 	std::ifstream	ifile(filename);
 	std::string		line;
 
-	if (!ifile.) {
+	if (!ifile) {
 		std::cout << "Error opening file: " << filename << "." << std::endl;
 		return ;
 	}
@@ -28,7 +28,7 @@ FileReplacer::FileReplacer(std::string filename, std::string searched, std::stri
 		return ;
 	}
 	while (std::getline(ifile, line)) {
-		replace(line);
+		_replace(line);
 		if (!ifile.eof())
 			_ofile << std::endl;
 	}
@@ -41,11 +41,15 @@ FileReplacer::~FileReplacer(void)
 	return ;
 }
 
-void	FileReplacer::replace(const std::string& line)
+void	FileReplacer::_replace(const std::string& line)
 {
 	std::string::size_type	pos = 0;
 	std::string::size_type	prev = 0;
 
+	if (_searched.empty()) {
+		_ofile << line;
+		return ;
+	}
 	while ((pos = line.find(_searched, pos)) != std::string::npos) {
 		_ofile << line.substr(prev, pos - prev) << _replaced;
 		pos += _searched.length();

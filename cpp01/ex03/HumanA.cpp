@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:51:50 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/19 16:39:53 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/25 23:50:28 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ void HumanA::attack() const {
 	std::cout << _name << " attacks with his " << _weapon.getType() << std::endl;
 	return ;
 }
-

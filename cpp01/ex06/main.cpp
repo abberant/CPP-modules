@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:58:18 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/24 16:21:04 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/28 21:20:13 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static void	_dialogue(Harl &harl, std::string level)
 	for (int i = 0; i < 5; i++)
 	{
 		std::cout << "[Barrista]: \n" << barrista_lines[i] << '\n' << std::endl;
-		std::cout << "[Harl]: \n";
+		std::cout << "[Harl]: ";
 		harl._complain(harl_levels[i]);
 		std::cout << std::endl;
 	}

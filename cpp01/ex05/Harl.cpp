@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:55:03 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/20 19:04:29 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/28 21:29:25 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,25 +26,26 @@ Harl::~Harl()
 
 void	Harl::debug(void)
 {
-	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I really do!" << std::endl;
+
+	std::cout << GREEN << DEBUG << RESET << std::endl;
 	return ;
 }
 
 void	Harl::info(void)
 {
-	std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
+	std::cout << BLUE << INFO << RESET << std::endl;
 	return ;
 }
 
 void	Harl::warning(void)
 {
-	std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << std::endl;
+	std::cout << YELLOW << WARNING << RESET << std::endl;
 	return ;
 }
 
 void	Harl::error(void)
 {
-	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
+	std::cout << RED << ERROR << RESET << std::endl;
 	return ;
 }
 
@@ -64,7 +65,7 @@ void	Harl::_complain(std::string level)
 		}
 		i++;
 	}
-	std::cout << "[Inaudible voices in the distance]" << std::endl;
+	std::cout << std::endl << "[Inaudible voices in the distance]" << std::endl;
 	return ;
 }
 

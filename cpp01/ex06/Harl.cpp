@@ -6,7 +6,7 @@
 /*   By: aanouari <aanouari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:58:20 by aanouari          #+#    #+#             */
-/*   Updated: 2023/11/16 16:00:50 by aanouari         ###   ########.fr       */
+/*   Updated: 2023/11/28 21:31:28 by aanouari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,22 @@ Harl::~Harl(void)
 
 void	Harl::debug(void)
 {
-	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!" << std::endl;
+	std::cout << GREEN << _DEBUG << RESET << std::endl;
 }
 
 void	Harl::info(void)
 {
-	std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
+	std::cout << BLUE << _INFO << RESET << std::endl;
 }
 
 void	Harl::warning(void)
 {
-	std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << std::endl;
+	std::cout << YELLOW << _WARNING << RESET << std::endl;
 }
 
 void	Harl::error(void)
 {
-	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
+	std::cout << RED << _ERROR << RESET << std::endl;
 }
 
 void	Harl::setFilter(const std::string& filter)
@@ -81,7 +81,7 @@ void	Harl::_complain(const std::string& level)
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	if (level != "DEBUG" && level != "INFO" && level != "WARNING" && level != "ERROR") {
-		std::cout << "[Inaudible voices in the distance]" << std::endl;
+		std::cout << std::endl << "[Inaudible voices in the distance]" << std::endl;
 		return ;
 	}
 
@@ -91,5 +91,5 @@ void	Harl::_complain(const std::string& level)
 			return ;
 		}
 	}
-	std::cout << "..." << std::endl;
+	std::cout << std::endl << "..." << std::endl;
 }
