@@ -1,6 +1,6 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void) : ClapTrap(), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(void)
 {
 	_name = "Default";
 	ClapTrap::_name = _name + "_clap_name";
@@ -46,22 +46,22 @@ std::string	DiamondTrap::getClapName(void)
 	return (ClapTrap::_name);
 }
 
-int			DiamondTrap::getHitPoints(void)
+int		DiamondTrap::getHitPoints(void)
 {
 	return (this->_hitPoints);
 }
 
-int			DiamondTrap::getEnergyPoints(void)
+int		DiamondTrap::getEnergyPoints(void)
 {
 	return (this->_energyPoints);
 }
 
-int			DiamondTrap::getAttackDamage(void)
+int		DiamondTrap::getAttackDamage(void)
 {
 	return (this->_attackDamage);
 }
 
-void		DiamondTrap::whoAmI(void)
+void	DiamondTrap::whoAmI(void)
 {
 	std::cout << "DiamondTrap " << _name << " says: \"My name is ";
 	std::cout << _name << " and my ClapTrap name is " << ClapTrap::_name << "!\"" << std::endl;

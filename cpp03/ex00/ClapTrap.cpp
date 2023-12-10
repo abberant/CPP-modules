@@ -39,7 +39,7 @@ std::string	ClapTrap::getName(void)
 	return (_name);
 }
 
-int			ClapTrap::getHitPoints(void)
+int		ClapTrap::getHitPoints(void)
 {
 	return (_hitPoints);
 }

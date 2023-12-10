@@ -1,16 +1,16 @@
 NAME = DiamondTrap
 SRC = main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp DiamondTrap.cpp
 OBJ = $(SRC:.cpp=.o)
-CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
-	$(CPP) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ)

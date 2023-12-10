@@ -2,16 +2,11 @@
 
 int main (void)
 {
-	std::string hero_name = "Hero";
-	std::string villain_name = "Villain";
-	std::cout << std::endl << GREEN << "----- Constructor calls -----" << RESET << std::endl;
-	ClapTrap hero(hero_name);
-	ClapTrap villain(villain_name);
+	ClapTrap hero("Hero");
+	ClapTrap villain("Villain");
 
-	std::cout << std::endl << GREEN << "----- Member function calls -----" << RESET << std::endl;
-	std::cout << hero.getName() << " is so smart, first thing they do is to repair themselves." << std::endl;
-	hero.beRepaired(10);
-	std::cout << villain.getName() << " just wants to attack." << std::endl;
+	std::cout << std::endl;
+	std::cout << villain.getName() << " wants to attack." << std::endl;
 	villain.attack(hero.getName());
 	std::cout << hero.getName() << " now attacks" << std::endl;
 	hero.attack(villain.getName());
@@ -24,7 +19,5 @@ int main (void)
 	std::cout << villain.getName() << " is so tired, they can't attack anymore." << std::endl;
 	villain.attack(hero.getName());
 	std::cout << hero.getName() << " won!" << std::endl;
-	
-	std::cout << std::endl << GREEN << "----- Destructor calls -----" << RESET << std::endl;
 	return (0);	
 }
