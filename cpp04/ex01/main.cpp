@@ -3,10 +3,23 @@
 
 int main()
 {
-	const Animal* kitten = new Cat();
+	Animal *pets[10];
+	for (int i = 0; i < 10; i++) {
+		if (i % 2)
+			pets[i] = new Cat();
+		else
+			pets[i] = new Dog();
+	}
+	std::cout << std::endl;
+	for (int i = 0; i < 10; i++) {
+		delete pets[i];
+	}
 	std::cout << std::endl;
 
-	const Animal* puppy = new Dog();
+	Animal* kitten = new Cat();
+	std::cout << std::endl;
+
+	Animal* puppy = new Dog();
 	std::cout << std::endl;
 
 	kitten->makeSound();

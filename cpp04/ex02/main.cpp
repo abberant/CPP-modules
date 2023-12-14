@@ -3,10 +3,10 @@
 
 int	main()
 {
-	const Cat* kitten = new Cat();
+	Cat* kitten = new Cat();
 	std::cout << std::endl;
 
-	const Dog* puppy = new Dog();
+	Dog* puppy = new Dog();
 	std::cout << std::endl;
 
 	kitten->makeSound();

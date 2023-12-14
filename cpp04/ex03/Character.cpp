@@ -59,16 +59,16 @@ void	Character::equip(AMateria *m)
 	std::cout << "Character " << _name << " inventory is full!" << std::endl;
 }
 
-void	Character::unequip(int index)
+void	Character::unequip(int idx)
 {
-	if (index < 0 || index > 3 || !_inventory[index])
+	if (idx < 0 || idx > 3 || !_inventory[idx])
 		return ;
-	_inventory[index] = NULL;
+	_inventory[idx] = NULL;
 }
 
-void	Character::use(int index, ICharacter &target)
+void	Character::use(int idx, ICharacter &target)
 {
-	if (index < 0 || index > 3 || !_inventory[index])
+	if (idx < 0 || idx > 3 || !_inventory[idx])
 		return ;
-	_inventory[index]->use(target);
+	_inventory[idx]->use(target);
 }

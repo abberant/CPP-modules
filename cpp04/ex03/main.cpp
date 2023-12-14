@@ -4,7 +4,8 @@
 #include "Cure.hpp"
 #include "AMateria.hpp"
 
-int main(void) {
+int main(void)
+{
 	std::cout << std::endl;
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());

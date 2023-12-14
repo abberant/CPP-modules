@@ -6,13 +6,13 @@
 int main()
 {
 	std::cout << std::endl;
-	const	Animal* mammal = new Animal();
-	const	Animal* kitten = new Cat();
-	const	Animal* puppy = new Dog();
+	Animal* mammal = new Animal();
+	Animal* kitten = new Cat();
+	Animal* puppy = new Dog();
 	
 	std::cout << std::endl;
-	std::cout << "Animal of type " << kitten->getType() << " created" << std::endl;
-	std::cout << "Animal of type " << puppy->getType() << " created" << std::endl;
+	std::cout << "A " << kitten->getType() << " was created" << std::endl;
+	std::cout << "A" << puppy->getType() << " was created" << std::endl;
 	kitten->makeSound();
 	puppy->makeSound();
 	mammal->makeSound();
@@ -23,8 +23,8 @@ int main()
 	delete puppy;
 
 	std::cout << std::endl;
-	const	WrongAnimal* amphibian = new WrongAnimal();
-	const	WrongAnimal* frog = new WrongCat();
+	WrongAnimal* amphibian = new WrongAnimal();
+	WrongAnimal* frog = new WrongCat();
 
 	std::cout << std::endl;
 	std::cout << "Animal of type " << frog->getType() << " created" << std::endl;

@@ -1,24 +1,24 @@
 #include "Animal.hpp"
 
-Animal::Animal() : _type("unlabeled")
+Animal::Animal() : _type("*unlabeled*")
 {
-	std::cout << "Default Animal constructed" << std::endl;
+	std::cout << "Animal " << _type <<  "constructed!" << std::endl;
 }
 
 Animal::Animal(std::string type) : _type(type)
 {
-	std::cout << "Animal of type " << _type << " constructed" << std::endl;
+	std::cout << "Animal of type " << _type << " constructed!" << std::endl;
 }
 
 Animal::Animal(const Animal& other)
 {
 	*this = other;
-	std::cout << "Animal " << _type << " copy constructed" << std::endl;
+	std::cout << "Animal " << _type << " copy constructed!" << std::endl;
 }
 
 Animal::~Animal()
 {
-	std::cout << "Animal " << _type << " destructed" << std::endl;
+	std::cout << "Animal " << _type << " destructed!" << std::endl;
 }
 
 Animal	&Animal::operator=(const Animal& other)
@@ -36,8 +36,5 @@ std::string Animal::getType() const
 
 void Animal::makeSound() const
 {
-	std::cout << "Animal ";
-	if (_type != "")
-		std::cout << _type << " ";
-	std::cout << "says: \"...\"" << std::endl;
+	std::cout << "Animal " << _type << " made a sound" << std::endl;
 }
