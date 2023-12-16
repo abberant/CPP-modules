@@ -46,6 +46,6 @@ int main()
 	delete kitten;
 	std::cout << std::endl;
 	delete puppy;
-	
+
 	return 0;
 }
