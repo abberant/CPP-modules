@@ -25,7 +25,8 @@ Character::Character(Character const &other)
 Character::~Character()
 {
 	for (int i = 0; i < 4; i++)
-		delete _inventory[i];
+		if (this->_inventory[i])
+			delete _inventory[i];
 	std::cout << "Character " << _name << " destructed!" << std::endl;
 }
 
@@ -37,7 +38,8 @@ Character &Character::operator=(Character const &rhs)
 	for (int i = 0; i < 4; i++)
 		delete _inventory[i];
 	for (int i = 0; i < 4; i++)
-		_inventory[i] = rhs._inventory[i]->clone();
+		if (rhs._inventory[i])
+			_inventory[i] = rhs._inventory[i]->clone();
 	std::cout << "Character " << _name << " assigned!" << std::endl;
 	return (*this);
 }
@@ -49,14 +51,14 @@ std::string const	&Character::getName() const
 
 void	Character::equip(AMateria *m)
 {
+	if (!m)
+		return ;
 	for (int i = 0; i < 4; i++) {
 		if (!_inventory[i]) {
-			_inventory[i] = m;
-			std::cout << "Character " << _name << " equipped with " << m->getType() << "!" << std::endl;
+			_inventory[i] = m->clone();
 			return ;
 		}
 	}
-	std::cout << "Character " << _name << " inventory is full!" << std::endl;
 }
 
 void	Character::unequip(int idx)

@@ -6,7 +6,6 @@
 
 int main(void)
 {
-	std::cout << std::endl;
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -37,3 +36,4 @@ int main(void)
 
 	return 0;
 }
+

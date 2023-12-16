@@ -29,15 +29,18 @@ MateriaSource	&MateriaSource::operator=(MateriaSource const &rhs)
 		if (_inventory[i])
 			delete _inventory[i];
 	for (int i = 0; i < 4; i++)
-		_inventory[i] = rhs._inventory[i]->clone();
+		if (rhs._inventory[i])
+			_inventory[i] = rhs._inventory[i]->clone();
 	return (*this);
 }
 
 void			MateriaSource::learnMateria(AMateria *m)
 {
+	if (!m)
+		return ;
 	for (int i = 0; i < 4; i++)
 		if (!_inventory[i]) {
-			_inventory[i] = m;
+			_inventory[i] = m->clone();
 			return ;
 		}
 }
