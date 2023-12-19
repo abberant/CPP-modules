@@ -51,11 +51,9 @@ std::string const	&Character::getName() const
 
 void	Character::equip(AMateria *m)
 {
-	if (!m)
-		return ;
 	for (int i = 0; i < 4; i++) {
 		if (!_inventory[i]) {
-			_inventory[i] = m->clone();
+			_inventory[i] = m;
 			return ;
 		}
 	}
@@ -65,6 +63,7 @@ void	Character::unequip(int idx)
 {
 	if (idx < 0 || idx > 3 || !_inventory[idx])
 		return ;
+	delete _inventory[idx];
 	_inventory[idx] = NULL;
 }
 

@@ -41,7 +41,7 @@ void			MateriaSource::learnMateria(AMateria *m)
 	for (int i = 0; i < 4; i++)
 		if (!_inventory[i]) {
 			_inventory[i] = m->clone();
-			return ;
+			break ;
 		}
 }
 

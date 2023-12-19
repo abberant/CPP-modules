@@ -19,6 +19,7 @@ AMateria::AMateria(AMateria const &src)
 AMateria::~AMateria()
 {
 	std::cout << "AMateria destructed!" << std::endl;
+
 }
 
 AMateria & AMateria::operator=(AMateria const & rhs)
