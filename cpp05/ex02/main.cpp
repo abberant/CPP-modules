@@ -58,7 +58,7 @@ static void	test_robotomy(void) {
 	std::cout << std::endl;
 	try {
 		RobotomyRequestForm form("Nicole");
-		Bureaucrat bureaucrat("Nick", 140);
+		Bureaucrat bureaucrat("Nick", 60);
 		std::cout << form << std::endl;
 		std::cout << bureaucrat << std::endl;
 		bureaucrat.signForm(form);
@@ -97,7 +97,7 @@ static void	test_presidential(void) {
 	std::cout << std::endl;
 	try {
 		PresidentialPardonForm form("Nicole");
-		Bureaucrat bureaucrat("Nick", 140);
+		Bureaucrat bureaucrat("Nick", 15);
 		std::cout << form << std::endl;
 		std::cout << bureaucrat << std::endl;
 		bureaucrat.signForm(form);

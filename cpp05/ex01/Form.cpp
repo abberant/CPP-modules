@@ -16,6 +16,7 @@ Form::Form(std::string name, int grade_to_sign, int grade_to_execute) : _name(na
 
 Form::Form(const Form &source) : _name(source._name), _grade_to_sign(source._grade_to_sign), _grade_to_execute(source._grade_to_execute) {
 	*this = source;
+	return ;
 }
 
 Form::~Form(void) {
