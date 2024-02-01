@@ -165,11 +165,11 @@ void ScalarConverter::_toChar(const std::string &literal) {
 }
 
 void ScalarConverter::_toInt(const std::string &literal) {
-	long	nb;
+	int	nb;
 
 	std::cout << "Int: ";
 	if (literal.length() == 1 && !std::isdigit(literal[0]))
-		nb = static_cast<long>(literal[0]);
+		nb = static_cast<int>(literal[0]);
 	else
 		nb = std::atoi(literal.c_str());
 	std::cout << nb << std::endl;
