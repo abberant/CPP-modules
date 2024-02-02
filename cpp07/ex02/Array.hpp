@@ -18,13 +18,16 @@ class Array
 
 	public:
 		Array(void) : _array(NULL), _size(0) {}
+
 		Array(unsigned int n) : _array(new T[n]), _size(n) {}
+
 		Array(Array const& src) {
 			this->_array = new T[src._size];
 			this->_size = src._size;
 			for (int i = 0; i < src._size; i++)
 				this->_array[i] = src._array[i];
 		}
+
 		~Array(void) { delete [] this->_array; }
 
 		Array& operator=(Array const& src) {
@@ -37,6 +40,7 @@ class Array
 			}
 			return (*this);
 		}
+		
 		T& operator[](int index) {
 			if (index < 0 || index >= this->_size)
 				throw OutOfBoundsException();

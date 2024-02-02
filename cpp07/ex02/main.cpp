@@ -46,9 +46,6 @@ int main(void) {
 	std::cout << "\tSize: " << copy.size() << std::endl;
 	for (int i = 0; i < copy.size(); i++)
 		std::cout << "\tcopy[" << i << "]: " << copy[i] << std::endl;
-	std::cout << YELLOW << "Getting the arrays locations" << RESET << std::endl;
-	std::cout << "\tstrings:\t" << &strings << std::endl;
-	std::cout << "\tcopy:\t\t" << &copy << std::endl;
 	std::cout << std::endl;
 
 	std::cout << GREEN << "------ Test 5: assignment operator ------" << RESET << std::endl;
@@ -59,9 +56,6 @@ int main(void) {
 	std::cout << "\tSize: " << assign.size() << std::endl;
 	for (int i = 0; i < assign.size(); i++)
 		std::cout << "\tassign[" << i << "]: " << assign[i] << std::endl;
-	std::cout << YELLOW << "Getting the arrays locations" << RESET << std::endl;
-	std::cout << "\tstrings:\t" << &strings << std::endl;
-	std::cout << "\tassign:\t\t" << &assign << std::endl;
 	std::cout << std::endl;
 
 	std::cout << GREEN << "------ Test 6: OutOfBoundsException ------" << RESET << std::endl;
