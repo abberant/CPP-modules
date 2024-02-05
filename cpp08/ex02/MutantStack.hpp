@@ -3,9 +3,6 @@
 #include <iostream>
 #include <algorithm>
 #include <stack>
-#include <deque>
-#include <vector>
-#include <list>
 
 #define RESET		"\e[m"
 #define RED			"\e[31m"
