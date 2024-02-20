@@ -47,11 +47,7 @@ void PmergeMe::sort(std::vector<int> &vector) {
 	std::vector<int> insertion_order = generate_insertion_sequence<std::vector<int> >(pend.size() - 1);
 	if (insertion_order.size() != 0) {
 		for (size_t i = 0; i < pend.size() - 1; i++) {
-			int element;
-			if (insertion_order[i] < static_cast<int>(pend.size()))
-				element = pend[insertion_order[i]];
-			else
-				continue;
+			int element = pend[insertion_order[i]];
 			if (element < sorted[0])
 				sorted.insert(sorted.begin(), element);
 			else {
@@ -187,7 +183,7 @@ bool validate_sequence(std::string sequence) {
 			std::cerr << "Error: Only positive digits are allowed." << std::endl;
 			return false;
 		}
-		int num = std::stoi(token.c_str());
+		int num = std::atoi(token.c_str());
 		for (size_t i = 0; i < seenNumbers.size(); i++) {
 			if (seenNumbers[i] == num) {
 				std::cerr << "Error: Only unique numbers are allowed." << std::endl;

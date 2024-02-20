@@ -49,7 +49,7 @@ void BitcoinExchange::_loadDatabase(void) {
 			}
 			date = line.substr(0, line.find(','));
 			value = line.substr(line.find(',') + 1);
-			fvalue = std::stof(value.c_str());
+			fvalue = std::atof(value.c_str());
 			_database[date] = fvalue;
 		}
 	}
@@ -78,7 +78,7 @@ void BitcoinExchange::readInput(std::string filename) {
 		}
 		date = line.substr(0, line.find('|'));
 		value = line.substr(line.find('|') + 1);
-		fvalue = std::stof(value.c_str());
+		fvalue = std::atof(value.c_str());
 		_btc(date, fvalue);
 	}
 }
